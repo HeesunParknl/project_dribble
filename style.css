@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .hand_wrist {
@@ -11,9 +12,15 @@ body {
   transform: rotate(-20deg);
   background-color: bisque;
   z-index: 1;
-  animation-name: hand_wrist;
+  animation-name: hit_wrist;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+@keyframes hit_wrist {
+  0% {
+    transform: rotate(-12deg);
+  }
 }
 
 .hand_palm {
@@ -30,6 +37,13 @@ body {
   animation-iteration-count: infinite;
 }
 
+@keyframes hit_palm {
+  0% {
+    top: 24px;
+    transform: rotate(8deg);
+  }
+}
+
 .hand_finger {
   width: 40px;
   height: 10px;
@@ -41,6 +55,13 @@ body {
   animation-name: hit_finger;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+@keyframes hit_finger {
+  0% {
+    margin-top: 4px;
+    transform: rotate(14deg);
+  }
 }
 
 .ball {
@@ -67,26 +88,6 @@ body {
   }
 
   100% {
-    top: 5px;
-  }
-}
-
-@keyframes hand_wrist {
-  0% {
-    transform: rotate(-12deg);
-  }
-}
-
-@keyframes hit_palm {
-  0% {
-    top: 24px;
-    transform: rotate(8deg);
-  }
-}
-
-@keyframes hit_finger {
-  0% {
-    margin-top: 4px;
-    transform: rotate(14deg);
+    top: 0px;
   }
 }
