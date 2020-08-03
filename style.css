@@ -1,8 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hand_wrist {
   width: 24px;
-  height: 18px;
-  margin-left: 8px;
-  transform: rotate(-5deg);
+  height: 20px;
+  margin-left: 4px;
+  transform: rotate(-20deg);
   background-color: bisque;
   z-index: 1;
   animation-name: hand_wrist;
@@ -14,8 +20,9 @@
   width: 50px;
   height: 15px;
   position: absolute;
-  top: 16px;
+  top: 22px;
   margin-left: 5px;
+  transform: rotate(5deg);
   background-color: bisque;
   border-radius: 30% 30% 30% 30%;
   animation-name: hit_palm;
@@ -26,9 +33,9 @@
 .hand_finger {
   width: 40px;
   height: 10px;
-  position: absolute;
-  top: 19px;
-  left: 50px;
+  margin-top: 0px;
+  margin-left: 40px;
+  transform: rotate(5deg);
   background-color: bisque;
   border-radius: 30% 30% 30% 30%;
   animation-name: hit_finger;
@@ -40,7 +47,7 @@
   width: 100px;
   height: 100px;
   position: relative;
-  margin-left: 12px;
+  margin-left: 20px;
   border-radius: 50%;
   background-color: brown;
   animation-name: bounce;
@@ -50,11 +57,11 @@
 
 @keyframes bounce {
   0% {
-    top: 3px;
+    top: 0px;
   }
 
   50% {
-    top: 275px;
+    top: 220px;
     width: 130px;
     height: 80px;
   }
@@ -66,19 +73,20 @@
 
 @keyframes hand_wrist {
   0% {
-    transform: rotate(-8deg);
+    transform: rotate(-12deg);
   }
 }
 
 @keyframes hit_palm {
   0% {
-    transform: rotate(5deg);
+    top: 24px;
+    transform: rotate(8deg);
   }
 }
 
 @keyframes hit_finger {
   0% {
-    top: 22px;
-    transform: rotate(10deg);
+    margin-top: 4px;
+    transform: rotate(14deg);
   }
 }
